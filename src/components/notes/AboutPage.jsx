@@ -10,7 +10,9 @@ function AboutPage() {
                 <p> The application allows you to browse through a list of notes, as well as add, update, and delete notes.</p>
                 
             
-                <p>The source code is available in <a href="https://github.com/KaranKaira/Keeper"> this repository </a> on GitHub.</p>
+                <p>The source code for Front-end is available on <a href="https://github.com/KaranKaira/Keeper-Frontend"> this repository </a> on GitHub.</p>
+                <p>The source code for Back-end is available on <a href="https://github.com/KaranKaira/Keeper-Server"> this repository </a> on GitHub.</p>
+
         </div>
     );
 }
