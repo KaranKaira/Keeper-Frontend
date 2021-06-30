@@ -24,7 +24,7 @@ function Navigation() {
   return(
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
       <div className='container'>
-      <a className="navbar-brand" href="/"><span class="navbar-brand mb-0 h1">Keeper</span></a>
+      <a className="navbar-brand" href="/"><span class="navbar-brand mb-0 h1">Note It</span></a>
         <ul className="navbar-nav mr-auto">
           <li className="nav-item"><NavLink exact className="nav-link" activeClassName="active" to="/notes">Notes</NavLink></li>
           <li className="nav-item"><NavLink exact className="nav-link" activeClassName="active" to="/about">About</NavLink></li>
