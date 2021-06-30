@@ -9,7 +9,7 @@ function NoteList(props){
 
 
     useEffect(() => {
-        axios.get("/api/notes/")
+        axios.get("https://karankaira-keeperserver.herokuapp.com/notes/")
             .then(res => setNotes(res.data))
             .catch(err => console.log(err));
     }, []);

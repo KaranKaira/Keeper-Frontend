@@ -13,7 +13,7 @@ function NoteEdit(props) {
 
     //grabs the title and content of the id in question and passes the data to the "note" array
     useEffect(() => {
-        axios.get(`/api/notes/${props.match.params._id}`)
+        axios.get(`https://karankaira-keeperserver.herokuapp.com/notes/${props.match.params._id}`)
             .then(res => setNote(res.data))
             .catch(err => console.log("Error: " + err));
     }, [props]);
@@ -24,7 +24,7 @@ function NoteEdit(props) {
         if (!note.title || !note.content) {
             alert("'Title' or 'Content' cannot be blank");
         } else {
-            axios.patch(`/api/notes/${props.match.params._id}`, note) //sends data to the API patch endpoint
+            axios.patch(`https://karankaira-keeperserver.herokuapp.com/notes/${props.match.params._id}`, note) //sends data to the API patch endpoint
                 .then(props.history.push(`/notes/${note._id}`)) //redirects to the note info page
                 .catch(err => console.log("Error: " + err));
         }

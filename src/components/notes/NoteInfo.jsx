@@ -11,7 +11,7 @@ function NoteInfo(props){
 
     //passes the objectID to the GET API for the particular note, receives the data from the backend and passes it to the "note" array
     useEffect(() => {
-        axios.get(`/api/notes/${props.match.params._id}`)
+        axios.get(`https://karankaira-keeperserver.herokuapp.com/notes/${props.match.params._id}`)
           .then(res => setNote(res.data))
           .catch(err => console.log("Error: ", err));
       }, [props]);
@@ -19,7 +19,7 @@ function NoteInfo(props){
 
       //passes the objectID to the DELETE API and redirects to the note list page
     function handleDelete() {
-        axios.delete(`/api/notes/${props.match.params._id}`)
+        axios.delete(`https://karankaira-keeperserver.herokuapp.com/notes/${props.match.params._id}`)
             .then(() => {
                 props.history.push("/notes");
             })
